@@ -21,6 +21,9 @@ if __name__ == '__main__':
     for i in range(n):
         
         # create a new array which we will reverse our given array value
+        # we take our n, which is the size of our array, and we want to ensure that we iterate backwards.
+        # in order to do this we take our size, subtract one, and then subtract it by our index until hitting index 0
+        # should look like n - 1 - i
         revArr = arr[n - 1 - i]
         
         # print our new reversed array
