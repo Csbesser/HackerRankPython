@@ -1,0 +1,21 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+# gather user input
+T = int(input())
+
+# create loop to gether the actual strings now for each test case
+for i in range (T):
+    
+    # set or S to our new input to gather strings
+    S = input()
+    
+    # set each S within our array index to gather our evens and odds
+    
+    # E will be even and O will be odd
+    
+    E = (S[i] for i in range(0, len(S), 2))
+    O = (S[i] for i in range(1, len(S), 2))
+    
+    # print our gathered values
+    print(*E, " ", *O, sep="")                                                                                                                                                
+                                                                                                                                                        
+                                                              
