@@ -1,0 +1,28 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+
+
+if __name__ == '__main__':
+    n = int(input().strip())
+
+    arr = list(map(int, input().rstrip().split()))
+
+
+    # ^^^ above code was provided
+
+    # create a loop in which we iterate through our given user array and the index associated
+    
+    for i in range(n):
+        
+        # create a new array which we will reverse our given array value
+        revArr = arr[n - 1 - i]
+        
+        # print our new reversed array
+        
+        print(revArr, end=" ")
