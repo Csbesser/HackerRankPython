@@ -1,0 +1,50 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+
+# create our input for our user and determine if it meets our constarint
+# constraint 1 <= n <= 10**5
+n = int(input())
+
+# our loop will determine if entered n value meets constraint
+if n in range (1, 10**5 + 1): # had to add + 1, otherwise the index value would be wrong at 100000, and stop at 99999
+    
+    # create our phonebook dictionary
+    phoneBook  = {}
+    
+    # create loop that will iterate through our users input through n times
+    for _ in range(n):
+        
+        # names should be the first value added to our dictionary, and their phone number added second
+        # so we should save our users input to our dictionary
+        
+        name, phone = input().split()
+        phoneBook.update({name: phone}) # name being our key and phone our value
+        
+    # now for our remainding user inputed values, determine whether names and numbers mathc with the values
+    
+    while True:
+        
+        # try so long as we have values in input
+        
+        try:
+            
+            # set name to input and phone number
+            name = input()
+            number =  phoneBook.get(name)
+            
+            # determine if name key is within our notebook, if so print name, else print Not Found
+            if name in phoneBook:
+                print('%s=%s' % (name, number))
+                
+            else:
+                print("Not found")
+        
+        # if we can no longer try then we make an exception to break\
+        except:
+            break          
+    
+    # if the entered n breaks our constraint
+else:
+    print("Please enter valid number and try again.")
+
+    
